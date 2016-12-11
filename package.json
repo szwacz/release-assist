@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Helper for your packages release process",
   "main": "index.js",
+  "bin": "bin.js",
   "scripts": {
     "test": "mocha --recursive \"spec/**/*.spec.js\"",
     "lint": "eslint ."
