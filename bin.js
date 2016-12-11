@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 
-var api = require('./index.js');
+const api = require('./index.js');
+
 api.start();

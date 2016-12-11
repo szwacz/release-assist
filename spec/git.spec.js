@@ -1,12 +1,12 @@
 /* eslint-env mocha */
 
-var expect = require('chai').expect;
-var git = require('../lib/git');
+const expect = require('chai').expect;
+const git = require('../lib/git');
 
-describe('git utils', function () {
-  it('can give recent commit messages', function (done) {
+describe('git utils', () => {
+  it('can give recent commit messages', (done) => {
     git.getRecentCommitMessages()
-    .then(function (commits) {
+    .then((commits) => {
       expect(commits).to.be.an('array');
       expect(commits.length).to.be.above(1);
       done();

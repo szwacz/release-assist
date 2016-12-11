@@ -1,10 +1,5 @@
-var releaseStart = require('./lib/release_start');
-
-var finish = function () {
-
-};
+const releaseStart = require('./lib/release_start');
 
 module.exports = {
   start: releaseStart,
-  finish: finish
 };
