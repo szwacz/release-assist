@@ -42,23 +42,24 @@ describe('changelog', () => {
       version: '1.1.1',
       date: new Date(2016, 2, 4),
       text: '-foo\n'
-          + '-bar\n',
+          + '-bar',
     });
     expect(changelog.extract(txt, '1.0.1')).to.eql({
       version: '1.0.1',
       date: new Date(2015, 1, 3),
-      text: '-123\n',
+      text: '-123',
     });
     expect(changelog.extract(txt, '1.0.0')).to.eql({
       version: '1.0.0',
       date: new Date(2014, 0, 2),
       text: '-qwe\n'
-          + '-rty\n',
+          + '-rty',
     });
   });
 
   it("throws if can't find given version in changelog", () => {
     const txt = '# 1.1.1 (2016-03-04)\n'
+            + '\n'
             + '-foo\n'
             + '-bar\n';
     expect(() => {
