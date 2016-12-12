@@ -3,9 +3,9 @@
 const expect = require('chai').expect;
 const changelog = require('../lib/changelog');
 
-describe('git utils', () => {
+describe('changelog', () => {
   it('can start new changelog', () => {
-    const txt = changelog.insertRelease(undefined, {
+    const txt = changelog.insert(undefined, {
       version: '1.0.0',
       date: new Date(2016, 4, 3),
       text: 'foo',
@@ -14,12 +14,12 @@ describe('git utils', () => {
   });
 
   it('can insert releases into changelog', () => {
-    let changelogText = changelog.insertRelease(undefined, {
+    let changelogText = changelog.insert(undefined, {
       version: '1.0.0',
       date: new Date(2016, 4, 3),
       text: 'foo',
     });
-    changelogText = changelog.insertRelease(changelogText, {
+    changelogText = changelog.insert(changelogText, {
       version: '1.0.1',
       date: new Date(2016, 4, 4),
       text: 'bar',
@@ -38,18 +38,18 @@ describe('git utils', () => {
             + '# 1.0.0 (2014-01-02)\n'
             + '-qwe\n'
             + '-rty\n';
-    expect(changelog.extractRelease(txt, '1.1.1')).to.eql({
+    expect(changelog.extract(txt, '1.1.1')).to.eql({
       version: '1.1.1',
       date: new Date(2016, 2, 4),
       text: '-foo\n'
           + '-bar\n',
     });
-    expect(changelog.extractRelease(txt, '1.0.1')).to.eql({
+    expect(changelog.extract(txt, '1.0.1')).to.eql({
       version: '1.0.1',
       date: new Date(2015, 1, 3),
       text: '-123\n',
     });
-    expect(changelog.extractRelease(txt, '1.0.0')).to.eql({
+    expect(changelog.extract(txt, '1.0.0')).to.eql({
       version: '1.0.0',
       date: new Date(2014, 0, 2),
       text: '-qwe\n'
@@ -62,7 +62,7 @@ describe('git utils', () => {
             + '-foo\n'
             + '-bar\n';
     expect(() => {
-      changelog.extractRelease(txt, '1.1.0');
+      changelog.extract(txt, '1.1.0');
     }).to.throw("Can't find release version 1.1.0 in the changelog");
   });
 });
