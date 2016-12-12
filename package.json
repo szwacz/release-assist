@@ -13,6 +13,7 @@
     "lint"
   ],
   "dependencies": {
+    "chalk": "^1.1.3",
     "commander": "^2.9.0",
     "fs-jetpack": "^0.10.5",
     "inquirer": "^2.0.0",
