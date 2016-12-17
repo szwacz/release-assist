@@ -1,7 +1,7 @@
 {
   "name": "release-assist",
   "version": "1.0.0",
-  "description": "Helper for your packages release process",
+  "description": "Helps you releasing new versions of your node.js and frontend projects",
   "main": "index.js",
   "bin": "bin.js",
   "scripts": {
