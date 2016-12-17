@@ -55,13 +55,13 @@ This will:
 2. Create git tag for the new release.
 3. Push release and newly created tag to origin repository.
 
-Done! The release is ready. It took 60 seconds instead of 5 minutes, and you're sure that freakin' version tag has been pushed to origin and remembering about it didn't slip your mind 4th time this month.
+Done! The release is ready. It took 60 seconds instead of 5 minutes, and you're sure that freakin' version tag has been pushed to origin and remembering about pushing it didn't slip your mind 4th time this month.
 
 ## Integrating into existing projects
 
 1. This tool expects the changelog file to be named `CHANGELOG.md`, if your is called differently you need to change the name (or subit a github issue to see what we can do).
 2. This tool expects that `CHANGELOG.md` have very specific structure (after all the script must be able to parse this file). See changelog of this project as an example. Parsing script expects release header to be in format `# version (YYYY-MM-DD)` below the header everything is treated as release description until next header is spotted.
-3. The release commit need to have commit message `x.x.x` (just the version number) if you have given those commits different messages in the past then release-assist won't be able to find previous release and will fill changelog with all commits from your project, but this will happen only once, for the first release done with release-assist, after that everything will be working as intended.
+3. The release commit need to have commit message `x.x.x` (just the version number) if you have given those commits different messages in the past then release-assist won't be able to find previous release and fill changelog with all commits of your project, but this will happen only once (for the first release done with release-assist), after that everything will be working as intended.
 
 # License (ISC)
 
