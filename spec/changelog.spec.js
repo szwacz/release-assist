@@ -3,7 +3,7 @@
 const expect = require('chai').expect;
 const changelog = require('../lib/changelog');
 
-describe('changelog', () => {
+describe('changelog utils', () => {
   it('can start new changelog', () => {
     const txt = changelog.insert(undefined, {
       version: '1.0.0',
