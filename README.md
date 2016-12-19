@@ -7,6 +7,8 @@ You may consider using it if...
 - That project uses git.
 - You're sick of doing repetitive tasks required for every new release (bumping the version, editing changelog, git-tagging the release). Release-assist helps automating those steps.
 
+![](http://szwacz.com/cd/release-assist.gif)
+
 ## Installation
 
 Install it globally:
