@@ -65,10 +65,6 @@ Done! The release is ready. It took 60 seconds instead of 5 minutes, and you're 
 2. This tool expects that `CHANGELOG.md` have very specific structure (after all the script must be able to parse this file). See changelog of this project as an example. Parsing script expects release header to be in format `# version (YYYY-MM-DD)` below the header everything is treated as release description until next header is spotted.
 3. The release commit need to have commit message `x.x.x` (just the version number) if you have given those commits different messages in the past then release-assist won't be able to find previous release and fill changelog with all commits of your project, but this will happen only once (for the first release done with release-assist), after that everything will be working as intended.
 
-# License (ISC)
+# License
 
-Copyright (c) 2016, Jakub Szwacz
-
-Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+Released under the ISC license.
