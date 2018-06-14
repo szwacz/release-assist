@@ -13,29 +13,26 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "husky": "^1.0.0-rc.8",
     "lint-staged": "^7.2.0",
     "mocha": "^3.2.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.13.5"
   },
   "scripts": {
     "test": "mocha --recursive \"spec/**/*.spec.js\"",
-    "prettier": "prettier --write \"./**/*.{js,json,css,md}\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": [
-        "lint-staged",
-        "npm test"
-      ]
-    }
+    "prettier": "prettier --write \"./**/*.{js,json,md}\"",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,json,md}": [
       "prettier --write",
       "git add"
     ]
   },
+  "pre-commit": [
+    "lint-staged",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/szwacz/release-assist.git"
