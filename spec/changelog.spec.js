@@ -1,5 +1,3 @@
-/* eslint-env mocha */
-
 const expect = require('chai').expect;
 const changelog = require('../lib/changelog');
 

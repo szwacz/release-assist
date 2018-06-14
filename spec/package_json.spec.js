@@ -1,5 +1,3 @@
-/* eslint-env mocha */
-
 const expect = require('chai').expect;
 const jetpack = require('fs-jetpack');
 const packageJson = require('../lib/package_json');
