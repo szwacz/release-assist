@@ -1,6 +1,6 @@
 # release-assist
 
-Small help with new releases of your node.js and frontend projects.
+Small tool to help with release process of your node.js and frontend projects.
 
 You may consider using it if...
 
